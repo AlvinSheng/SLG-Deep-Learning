@@ -5,7 +5,7 @@ Hello Everybody! Please answer questions for Chapters 1 and 2 below your name.
 **1. Do you buy into the hype of AI and machine learning?**
 
 
-Michael:
+Michael: this is a test......................................................................................................................
 
 Alivn:
 
