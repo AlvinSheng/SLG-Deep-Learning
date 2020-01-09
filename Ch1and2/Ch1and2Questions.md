@@ -5,6 +5,7 @@ Please answer questions for Chapters 1 and 2, labeled with your name.
 **1. Do you buy into the hype of AI and machine learning?**
 
 Alvin: Example Answer
+Justin: Sure
 
 **2.The authors mention on page 5 that machine learning differs from statistics because it “tends to deal with large, complex datasets (such as a dataset of millions of images, each consisting of tens of thousands of pixels) for which classical statistical analysis such as Bayesian analysis would be impractical.  As a result, machine learning, and especially deep learning, exhibits comparatively little mathematical theory -- maybe too little -- and is engineering oriented.  It’s a hands-on discipline in which ideas are proven empirically more often than theoretically.”
 What are your thoughts on this viewpoint?  What do you see as the similarities and differences between machine learning and statistics?**
