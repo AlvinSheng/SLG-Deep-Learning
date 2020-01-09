@@ -1,5 +1,7 @@
 # SLG-Deep-Learning
 
+I need to get an HDMI port adapter.
+
 Originally the Statistical Learning Group (SLG) was created to fill a gap in advanced statistical areas of interest not typically covered in coursework, and we intend to continue this mission. We propose to form a reading group of graduate and highly motivated undergraduate students to learn more about Deep Learning, and where possible, connect statistical ideas. To accomplish this we will select a text (or a few texts) to read from, and answer directed questions, which we will discuss in our meetings. In an effort to better facilitate learning when the group meets one member will give a low-stakes presentation on the topic from the reading; this presentation can be thought of as a short 5-minute lightning talk. 
 
 
