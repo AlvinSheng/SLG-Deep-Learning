@@ -31,7 +31,7 @@ What are your thoughts on this viewpoint?  What do you see as the similarities a
 
 
 
-**6. How does the concept of momentum apply to SGD? **
+**6. How does the concept of momentum apply to SGD?**
 
 
 
