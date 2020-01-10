@@ -26,11 +26,4 @@ Rough schedule:
 | Apr 2nd   | Chapter 6                             | Rebekah C. & Megan T.        |
 | Apr 16th  | Natural Language Processing Project   |                  
 
-- Jan 9th, Introduction, Intro to R/GitHub 
-- Jan 16th, Chapters 1 & 2
-- Jan 30th, Chapter 3 & Applied Project
-- Feb 13th, Chapter 4 & Readings from other texts
-- Feb 27th, Chapter 5
-- Mar 19th, Computer Vision Project
-- Apr 2nd, Chapter 6
-- Apr 16th, Natural Language Processing Project  
+
