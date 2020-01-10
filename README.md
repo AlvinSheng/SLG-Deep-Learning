@@ -26,4 +26,12 @@ Rough schedule:
 | Apr 2nd   | Chapter 6                             | Rebekah C. & Megan T.        |
 | Apr 16th  | Natural Language Processing Project   |                  
 
-
+## Instructions for Updating Question Files
+1. Fork AlvinSheng/SLG-Deep-Learning
+..* You only have to do this once ever!
+2. Edit the question document
+3. Commit to your branch (see below if doing so in rstudio)
+..1. git add -A
+..2. git commit --m "Your message here"
+..3. git push
+4. Submit a pull request
