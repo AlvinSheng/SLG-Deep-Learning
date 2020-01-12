@@ -19,7 +19,7 @@ What are your thoughts on this viewpoint?  What do you see as the similarities a
 **3. Deep learning requires a loss function.  How have you dealt with loss functions in your statistics life so far?  Why do we often use squared error loss?**
 
 Deepak: 
-1) Dealt with loss fuctions while using linear regression. Specially using R square to comapre various models built for prediction.
+1) Dealt with loss fuctions while using linear regression. Specially using mean squared error to comapre various models built for prediction.
 2) 
  a) Error loss could be postive or negative depending on predicated value by model is higher or lower than the actual value. By squaring error loss, we ensure it doesn't cancel each other out.
  b) Error distribution is epxeted to be normally distributed as per CLT.
