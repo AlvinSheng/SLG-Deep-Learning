@@ -28,7 +28,7 @@ Deepak:
 **4. Why are classical machine learning algorithms such as SVMs, random forests, gradient boosting, etc., considered "shallow learning," whereas neural nets are considered “deep learning”? Can shallow methods be stacked to emulate neural networks?**
 Deepak:
 1) In Deep Learning all layres of the Model learn jointly, at the same time rather than in scuession. With such joint leanring, whenever model adjust its one of the feature, all other features depending on it adjust accordingly. All such features and layers adjustment happend based on the feedback singal which is generated to serve the end goad that model has.
-2) Shallow learning models such as SVMs, random forest,  etc. tend to focus on learning from one of two layers of reprensentations of data. Where as deep learning learnins from 100s/1000s of layres of represenations. 
+2) Shallow learning models such as SVMs, random forest,  etc. tend to focus on learning from one of two layers of reprensentations. Where as deep learning model learns from 100s/1000s of layres of represenations. 
 Shallow learning models also require greater length of users inputs to format input data to suit models. Where as deep learning can accept less formated data. 
 
 
