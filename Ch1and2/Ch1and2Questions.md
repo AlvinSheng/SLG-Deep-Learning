@@ -29,9 +29,9 @@ Shallow learning models also require greater length of users inputs to format in
 
 
 **5. Why is stochastic gradient descent better than regular gradient descent for neural networks?**
-
-
-
+Deepak:
+To minimize the error, regular GD, goes through all the training samples to perform single update for a parameter in a given iteration. In Stochastics GD subset of training training samples are used to update the parameter in a given iteration.
+In neural newtworks, very large training dataset is expected and stochastic GD provides better prefrormance than regular SD as it uses limited but radom samples.
 
 
 **6. How does the concept of momentum apply to SGD?**
@@ -41,13 +41,18 @@ Shallow learning models also require greater length of users inputs to format in
 
 
 **7. What is a tensor, have you seen it before?  Did you understand the section on the dot-product?**
-
+Deepak:
+Tensor is container of data / data set. Have used arrays, vectors, matrices which are differnt dimention tensors. yes, understood matrix dot-product operations performed Numpy library. Will need more hands-on practice to get used to syntax.
 
 
 
 
 **8. In the compilation step notice you need a loss function, an optimizer, and metrics to monitor during training/testing. In linear regression do we need these as well? If so what are they?**
-
+Deepak:
+In regression -
+loss function = 
+Optimizer = 
+metrics to monitor = 
 
 
 
