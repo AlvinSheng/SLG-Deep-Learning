@@ -18,7 +18,6 @@ Deepak:
 1) Dealt with loss fuctions while using linear regression. Specially using mean squared error to comapre linear regression models built for prediction.
 2) 
  a) Error loss could be postive or negative depending on predicated value by model is higher or lower than the actual value. By squaring error loss, we ensure it doesn't cancel each other out.
- b) Error observed comes from systimatic error and random error. Systimatic error can be reduced just by taking mean. Whereas random error (aka noise) comes from measurement error, environment  distribution is epxeted to be normally distributed as per CLT.
  b) Error observed comes from noice such as measurement error, environmental distribution etc. Which according to CLT is normally distributed. In order make such error distirubtion tight ( less spread), one need to reduce variance of error distribution. And Variance is calaculated as squared error w.r.t. mean, so we use squiared error loss.
 
 
