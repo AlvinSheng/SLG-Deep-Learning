@@ -3,27 +3,23 @@ Please answer questions for Chapters 1 and 2, labeled with your name.
 
 
 **1. Do you buy into the hype of AI and machine learning?**
-
-Alvin: Example Answer
-Justin: Sure
 Deepak: Yes, I do. 
 
 **2.The authors mention on page 5 that machine learning differs from statistics because it “tends to deal with large, complex datasets (such as a dataset of millions of images, each consisting of tens of thousands of pixels) for which classical statistical analysis such as Bayesian analysis would be impractical.  As a result, machine learning, and especially deep learning, exhibits comparatively little mathematical theory -- maybe too little -- and is engineering oriented.  It’s a hands-on discipline in which ideas are proven empirically more often than theoretically.”
 What are your thoughts on this viewpoint?  What do you see as the similarities and differences between machine learning and statistics?**
-
-Machine learning is statistics delivered at scale. Applications of calculus, algebra and statistics together.
+Deepak:
+My view, Machine learning is applications of calculus, algebra and statistics delivered together.
 Statistics provides probabilities, calculus helps tunning models to make probabilities more accurate and linear algebra provides ability to perform large computations more efficently. 
-
-
 
 
 **3. Deep learning requires a loss function.  How have you dealt with loss functions in your statistics life so far?  Why do we often use squared error loss?**
 
 Deepak: 
-1) Dealt with loss fuctions while using linear regression. Specially using mean squared error to comapre various models built for prediction.
+1) Dealt with loss fuctions while using linear regression. Specially using mean squared error to comapre linear regression models built for prediction.
 2) 
  a) Error loss could be postive or negative depending on predicated value by model is higher or lower than the actual value. By squaring error loss, we ensure it doesn't cancel each other out.
- b) Error distribution is epxeted to be normally distributed as per CLT.
+ b) Error observed comes from systimatic error and random error. Systimatic error can be reduced just by taking mean. Whereas random error (aka noise) comes from measurement error, environment  distribution is epxeted to be normally distributed as per CLT.
+ b) Error observed comes from noice such as measurement error, environmental distribution etc. Which according to CLT is normally distributed. In order make such error distirubtion tight ( less spread), one need to reduce variance of error distribution. And Variance is calaculated as squared error w.r.t. mean, so we use squiared error loss.
 
 
 **4. Why are classical machine learning algorithms such as SVMs, random forests, gradient boosting, etc., considered "shallow learning," whereas neural nets are considered “deep learning”? Can shallow methods be stacked to emulate neural networks?**
