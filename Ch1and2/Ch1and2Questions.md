@@ -3,7 +3,7 @@ Please answer questions for Chapters 1 and 2, labeled with your name.
 
 
 **1. Do you buy into the hype of AI and machine learning?**
-Deepak: Yes, I do. 
+Deepak: Yes, I do. With advances in large data set availablity, reduced data storage, computing cost AI is proving to be much more echonoical than before. AI has huge potential to reduce Operationa and capitcal costs for various business operations.
 
 **2.The authors mention on page 5 that machine learning differs from statistics because it “tends to deal with large, complex datasets (such as a dataset of millions of images, each consisting of tens of thousands of pixels) for which classical statistical analysis such as Bayesian analysis would be impractical.  As a result, machine learning, and especially deep learning, exhibits comparatively little mathematical theory -- maybe too little -- and is engineering oriented.  It’s a hands-on discipline in which ideas are proven empirically more often than theoretically.”
 What are your thoughts on this viewpoint?  What do you see as the similarities and differences between machine learning and statistics?**
@@ -42,7 +42,7 @@ In Momentum based SGD, each increment is based on current gradient value and als
 
 **7. What is a tensor, have you seen it before?  Did you understand the section on the dot-product?**
 Deepak:
-Tensor is container of data / data set. Have used arrays, vectors, matrices which are differnt dimention tensors. yes, understood matrix dot-product operations performed Numpy library. Will need more hands-on practice to get used to syntax.
+Tensor is container of data / data set. Have used arrays, vectors, matrices which are tensors with differnt dimentions. yes, understood matrix dot-product operations performed Numpy library. Will need more hands-on practice to get used to syntax.
 
 
 
@@ -51,9 +51,9 @@ Tensor is container of data / data set. Have used arrays, vectors, matrices whic
 Deepak:
 In linear regression -
 
-loss function = cost function = square of [(hypothesis prediction) - (actual value)] for all samples in data set, divided by number of samples.
+loss function = cost function = minimse squared error loss = square of [(hypothesis prediction) - (actual value)] for all samples in data set, divided by number of samples.
 
-Optimizer = Gradient Descent
+Optimizer = Linear regression optimises to reduce cost using least square.
 
 metrics to monitor = Root Mean Square Error, R squared and adjusted R squared, 
 
