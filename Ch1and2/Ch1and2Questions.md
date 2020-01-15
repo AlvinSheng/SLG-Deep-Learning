@@ -50,9 +50,12 @@ Tensor is container of data / data set. Have used arrays, vectors, matrices whic
 **8. In the compilation step notice you need a loss function, an optimizer, and metrics to monitor during training/testing. In linear regression do we need these as well? If so what are they?**
 Deepak:
 In linear regression -
-loss function = square of [(hypothesis prediction) - (actual value)] for all samples in data set, divided by number of samples.
+
+loss function = cost function = square of [(hypothesis prediction) - (actual value)] for all samples in data set, divided by number of samples.
+
 Optimizer = Gradient Descent
-metrics to monitor = 
+
+metrics to monitor = Root Mean Square Error, R squared and adjusted R squared, 
 
 
 
