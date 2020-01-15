@@ -35,9 +35,9 @@ In neural newtworks, very large training dataset is expected and stochastic GD p
 
 
 **6. How does the concept of momentum apply to SGD?**
-
-
-
+Deepak:
+With small learning rate SGD would stuck at local minimum and would take long time to converge. With large learning rate SGD would increase the converge speed but intrdouces risk to go pass golobal minima.
+In Momentum based SGD, each increment is based on current gradient value and also on the previous parameter update. This approach provides quicer convergence and avoid getting stuck at locak minima.
 
 
 **7. What is a tensor, have you seen it before?  Did you understand the section on the dot-product?**
