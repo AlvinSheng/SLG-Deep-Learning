@@ -94,4 +94,6 @@ What are your thoughts on this viewpoint?  What do you see as the similarities a
 
 **Michael**: In linear regression we do have all these components even though we may not refer to them in the same manner. The loss function that we typically use is the residual sum of squares. I woudn't typically call this an optimizer but we just try to minimize the RSS using the least squares algorithm. There are many different metrics we can monitor but a common one is the mean squared error.
 
+**Dale**: In the simplest cases of leinear regression, we typically don't need an optimizer as we already got the closed form of the 
+normal equation, and the loss function is the sqaured error. However, when we add some penalty terms such as norms of parameters to the loss function, there can be no closed form solution. Since norms are typically convex, we can use an optimizer together (say, Newton's method) to obtain the estimated parameters.
 
