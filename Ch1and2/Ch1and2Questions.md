@@ -11,6 +11,9 @@ Please answer questions for Chapters 1 and 2, labeled with your name.
 **Michael**: Yes, I do buy into the hype of AI and machine learning because they have led to many technological advancements in image recognition, speech recognition, and predictive capability. Although I buy into the hype I also recognize that these tools have limitations and I shouldn't have lofty expectations. We are still a ways away from computers that can think on their own.
 
 
+**Dale**: Yes. But I also notice that deep learning technique is not yet fully explainable and transparent. Decision tree can be regarded as a transparent machine learning classifier as its decision boundary can be revealed to the users. For many other machine learning models, however, the model can contain too many parameters so that the decision boundary cannot be obtained directly. Without knowing the true decision boundary, human users may not "trust" the AI or machine learning models. Note that visualization can improve the trust to some extent,say, the heat map in neural network. On the other hand, deep learning models may not be robust. Pixel attacks may alter the result of a classifier. That indicates that AI models in modern days may not achieve the human level (even in computer vision tasks). 
+
+
 **Deepak**: Yes, I do. With advances in large data set availability, reduced data storage, computing cost AI is proving to be much more economical than before. AI has huge potential to reduce Operational and Capital costs for various business operations.
 
 **Jimmy**: I am a pretty firm believer into the hype of AI and machine learning. Seeing such a wide breadth of problems tackled by these methods has been very impressive and inspiring. Though I understand it has drawbacks. I do not believe some of the apocalyptic premonitions that many media outlets and movies share; but who knows? Did you hear that [Google assistant that sounded like a human?](https://www.youtube.com/watch?v=JvbHu_bVa_g)
@@ -25,9 +28,13 @@ What are your thoughts on this viewpoint?  What do you see as the similarities a
 
 **David**: Because we are dealing with large populations here, there may be less of an inclination to worry about certain theory regarding approximations of the entire population. It also is difficult in some cases to draw inference, as ML frameworks can be fairly complex and do not lend themselves to easy interpretation. While ML theory does pull from statistical concepts, it has somewhat diverged into an engineering-oriented field. As a statistician, I think that there should be a stronger push for rigor behind ML methods in an effort to unify them more closely with statistical theory.
 
+
+**Dale**: I agree with this viewpoint as it explains the current situations. That is, some machine learning models (like deep neural network) are used without fully understand the mathematics behind. Parameter tuning becomes rather an "engineering" task without enough guidelines from mathematics. We however, do know that many machine learning techniques can be studied by statistics. Dense feed-forward neural network, for example, can be viewed as multiple linear regression. Although many other machine learning algorithms have its computer science background, say, convolutional layers from computer vision and signal processing, it doesn't necessarily mean that we should treat statistics and machine learning as two different disciplines, as prediction based on data is always a essential task in statistics. 
+
 **Deepak**: My view, Machine learning is applications of calculus, algebra and statistics delivered together. Statistics provides probabilities, calculus helps tuning models to make probabilities more accurate and linear algebra provides ability to perform large computations more efficiently.
 
 **Jimmy**: I think that ML is very effective at what it is doing, but definitely lacking in some areas where classical statistics shines. I think that a lot of machine learning would benefit from more mathematical rigor, but more importantly (to me at least) is interpretability. I think that trying to mix the prediction effectiveness that black box models give with the interpretability of something like a linear model or even a small decision tree is very important (see the talk that Dr. Cynthia Rudin gave last semester).
+
 
 
 
@@ -39,6 +46,7 @@ What are your thoughts on this viewpoint?  What do you see as the similarities a
 
 **Michael**: Yes, in every regression that we perform we use a loss function whether we realize it or not. Regression seeks to find the line of best fit by minimizing the residual sum of square (squared error loss). We often use squared error loss because it is easy to understand; i.e. we want to minimize the (euclidean) distance between our predictions and the true values for our observations.
 
+**Dale**: Yes, the squared error in linear regression can be viewed as a loss function, although we don't actually need to obtain the parameters of a simple linear regresssion through optimization when we have the closed form answer. In LASSO or ridge regression, the loss functions are further added with penalty term, and these are the cases we may actually need optimizers. Note that squared error loss in linear regression is convex and differentiable. That brings many nice properties such as local minimum indicating global minimum. 
 
 **Deepak**:
 1.	Dealt with loss functions while using linear regression. Specially using mean squared error to compare linear regression models built for prediction.
@@ -62,6 +70,9 @@ What are your thoughts on this viewpoint?  What do you see as the similarities a
 **Michael**: Traditional machine learning algorithms only rely on one layer of data representation that is often derived through feature engineering. In contrast neural networks are considered to be 'deep learners' because they use multiple layers of representation that are learned from the data. Although I am not familiar with the particulars of it, I believe there is a whole ML framework called stacking where you build many 'simple' models and stack them together into one model. So yes I think they can be stacked to emulate neural networks.
 
 
+**Dale**: In "shallow learning", the result obainted by a group of classifiers are not feeded to another group but directly produced as an output. In "deep learning", there will be multiple layers of classifiers which increase the complexity of the model. Some shallow methods could be stacked. Note that a softmax regression model could be stacked into a deep neural network (during this process, we may need to change the filters into ReLU).
+
+
 **Deepak**:
 1.	In Deep Learning all layers of the Model learn jointly, at the same time rather than in succession. With such joint learning, whenever model adjust its one of the feature, all other features depending on it adjust accordingly. All such features and layers adjustment happened based on the feedback signal which is generated to serve the end goad that model has.
 2.	Shallow learning models such as SVMs, random forest, etc. tend to focus on learning from one of two layers of representations. Where as deep learning model learns from 100s/1000s of layers of representations. Shallow learning models also require greater length of users inputs to format input data to suit models. Where as deep learning can accept less formatted data.
@@ -69,6 +80,7 @@ What are your thoughts on this viewpoint?  What do you see as the similarities a
 
 
 **Jimmy**: The individual layers of a neural network are each performing simple operations/transformations, perhaps even simpler than what a single shallow model would do. The difference is that the neural network is optimizing its performance of all of these transformations together whereas each shallow model is greedily trying to perform best for itself. A neural network. I see the disparity as if a neural network is a bunch of simple models working together to perform the best while stacking is like each model trying to do the best on its own and then averaging their predictions.
+
 
 
 
@@ -81,8 +93,12 @@ What are your thoughts on this viewpoint?  What do you see as the similarities a
 **Michael**: In regular gradient descent we would need to calculate the gradient at every data point which can be computationally intensive as our dataset size grows. To circumvent this we randomly choose one data point to approximate the gradient and move 1 step size down the gradient. This will allow for faster convergence, and in practice the book says we use a batch of training points.
 
 
+**Dale**: Regular gradient descent which computes the gradient from the whole data can be way too expensive in a single iteration when the volumn of the raw data is large. On the contrary, when we use a small batch of data and calculates the gradient, each iteration will take much less time and computational cost.
+
+
 **Deepak**:
 To minimize the error, regular GD, goes through all the training samples to perform single update for a parameter in a given iteration. In Stochastics GD subset of training samples are used to update the parameter in a given iteration. In neural networks, very large training dataset is expected and stochastic GD provides better performance than regular SD as it uses limited but random samples.
+
 
 
 **Jimmy**: There are large computational impacts to making the change to stochastic gradient descent. Using a subset of the data to feed into a gradient descent rather than the whole data set saves lots of time, especially considering the big data problems that we are often trying to solve with neural networks. 
@@ -97,6 +113,7 @@ To minimize the error, regular GD, goes through all the training samples to perf
 
 **Michael**: Momentum allows us to not only use the current gradient but using past 'acceleration' to calculate the velocity. This is important because if the velocity is not very fast then it will allow SGD to not get stuck in a non-optimal local minimum.
 
+**Dale**: Original gradient descent only uses information from the current iteration, while momentum uses information from past iterations. Momentum can help the optimizer converge in a fast manner and escape from the local minimum to a global minimum. 
 
 **Deepak**:
 With small learning rate SGD would stuck at local minimum and would take long time to converge. With large learning rate SGD would increase the converge speed but introduces risk to go pass global minima. In Momentum based SGD, each increment is based on current gradient value and also on the previous parameter update. This approach provides quicker convergence and avoid getting stuck at local minima.
@@ -114,6 +131,7 @@ With small learning rate SGD would stuck at local minimum and would take long ti
 
 **Michael**: A tensor is a generalization of vectors and matrices to more than 2 dimensions. I found the section on the tensor dot-product to be kind of confusing since it is not presented in the typical matrix algebra notation, but after just thinking about matrix multiplication what they presented makes sense.
 
+**Dale**: A tensor is essentially an array with multiple dimentions. Vectors and matrices are all instances of tensor. The dot-product is generalization of matrix product. That is, for the dot product of (a,b,c,d) and (d,e) tensors, the result is a (a,b,c,e) tensor, with each term (i,j,k,m) being the inner product of the two vectors (i,j,k,:) and (:,m). 
 
 **Deepak**:
 Tensor is container of data / data set. Have used arrays, vectors, matrices which are tensors with different dimensions. yes, understood matrix dot-product operations performed Numpy library. Will need more hands-on practice to get used to syntax.
@@ -131,6 +149,10 @@ Tensor is container of data / data set. Have used arrays, vectors, matrices whic
 
 **Michael**: In linear regression we do have all these components even though we may not refer to them in the same manner. The loss function that we typically use is the residual sum of squares. I woudn't typically call this an optimizer but we just try to minimize the RSS using the least squares algorithm. There are many different metrics we can monitor but a common one is the mean squared error.
 
+
+**Dale**: In the simplest cases of leinear regression, we typically don't need an optimizer as we already got the closed form of the 
+normal equation, and the loss function is the sqaured error. However, when we add some penalty terms such as norms of parameters to the loss function, there can be no closed form solution. Since norms are typically convex, we can use an optimizer together (say, Newton's method) to obtain the estimated parameters.
+
 **Deepak**:
 In linear regression -
 
@@ -139,7 +161,6 @@ loss function = cost function = minimise  squared error loss = square of [(hypot
 Optimizer = Linear regression optimizes to reduce cost using least square.
 
 metrics to monitor = Root Mean Square Error, R squared and adjusted R squared, 
-
 
 
 **Jimmy**: In linear regression, we use the sum of squared errors as the loss function that we are trying to minimize. We do so through solving the normal equations.
