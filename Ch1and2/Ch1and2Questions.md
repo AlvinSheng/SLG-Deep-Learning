@@ -58,7 +58,7 @@ What are your thoughts on this viewpoint?  What do you see as the similarities a
 
 **Michael**: In regular gradient descent we would need to calculate the gradient at every data point which can be computationally intensive as our dataset size grows. To circumvent this we randomly choose one data point to approximate the gradient and move 1 step size down the gradient. This will allow for faster convergence, and in practice the book says we use a batch of training points.
 
-
+**Dale**: Regular gradient descent which computes the gradient from the whole data can be way too expensive in a single iteration when the volumn of the raw data is large. On the contrary, when we use a small batch of data and calculates the gradient, each iteration will take much less time and computational cost.
 
 
 **6. How does the concept of momentum apply to SGD?**
@@ -70,6 +70,7 @@ What are your thoughts on this viewpoint?  What do you see as the similarities a
 
 **Michael**: Momentum allows us to not only use the current gradient but using past 'acceleration' to calculate the velocity. This is important because if the velocity is not very fast then it will allow SGD to not get stuck in a non-optimal local minimum.
 
+**Dale**: Original gradient descent only uses information from the current iteration, while momentum uses information from past iterations. Momentum can help the optimizer converge in a fast manner and escape from the local minimum to a global minimum. 
 
 
 **7. What is a tensor, have you seen it before?  Did you understand the section on the dot-product?**
@@ -80,6 +81,7 @@ What are your thoughts on this viewpoint?  What do you see as the similarities a
 
 **Michael**: A tensor is a generalization of vectors and matrices to more than 2 dimensions. I found the section on the tensor dot-product to be kind of confusing since it is not presented in the typical matrix algebra notation, but after just thinking about matrix multiplication what they presented makes sense.
 
+**Dale**: A tensor is essentially an array with multiple dimentions. Vectors and matrices are all instances of tensor. The dot-product is generalization of matrix product. That is, for the dot product of (a,b,c,d) and (d,e) tensors, the result is a (a,b,c,e) tensor, with each term (i,j,k,m) being the inner product of the two vectors (i,j,k,:) and (:,m). 
 
 
 
