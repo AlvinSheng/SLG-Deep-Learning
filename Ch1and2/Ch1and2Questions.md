@@ -47,8 +47,7 @@ What are your thoughts on this viewpoint?  What do you see as the similarities a
 
 **Michael**: Traditional machine learning algorithms only rely on one layer of data representation that is often derived through feature engineering. In contrast neural networks are considered to be 'deep learners' because they use multiple layers of representation that are learned from the data. Although I am not familiar with the particulars of it, I believe there is a whole ML framework called stacking where you build many 'simple' models and stack them together into one model. So yes I think they can be stacked to emulate neural networks.
 
-
-
+**Dale**: In "shallow learning", the result obainted by a group of classifiers are not feeded to another group but directly produced as an output. In "deep learning", there will be multiple layers of classifiers which increase the complexity of the model. Some shallow methods could be stacked. Note that a softmax regression model could be stacked into a deep neural network (during this process, we may need to change the filters into ReLU).
 
 
 **5. Why is stochastic gradient descent better than regular gradient descent for neural networks?**
