@@ -29,6 +29,7 @@ Which method do you think makes more sense intuitively?  Do you see any possible
 
 **Saran**:
 
+**Yan**;
 
 
 **2. If you’ve set up your machine and are fitting these models, what happens to your test error when you use a model
@@ -60,6 +61,7 @@ fit with more epochs for the binary classification? Does it follow the trend of 
 
 **Saran**:
 
+**Yan**;
 
 
 **3. What is the importance of properly choosing a loss function? 
@@ -91,6 +93,7 @@ Can you think of any consequences or examples of side effects of choosing a sub-
 
 **Saran**:
 
+**Yan**;
 
 
 **4. Why might we want to scale the data? Why might it be important to use the mean and standard deviation
@@ -122,3 +125,5 @@ training statistics and test with test statistics)?**
 **Rebekah**:
 
 **Saran**:
+
+**Yan**;
