@@ -3,7 +3,7 @@ Please answer questions for Chapter 3 next to your name.
 **1. On page 61 the authors discuss two options for preparing the data for use.  
 Which method do you think makes more sense intuitively?  Do you see any possible pros or cons to one choice or the other?**
 
-**Alvin**:
+**Alvin**: Padding seems more intuitive to me. One-hot encoding seems like it would lead to humongous sparse tensors. Even then, there may be some missing categories, especially with new data.
 
 **Antonio**:
 
@@ -35,7 +35,7 @@ Which method do you think makes more sense intuitively?  Do you see any possible
 **2. If you’ve set up your machine and are fitting these models, what happens to your test error when you use a model
 fit with more epochs for the binary classification? Does it follow the trend of the validation error?**
 
-**Alvin**:
+**Alvin**: For the IMDB binary classification, using more than 4 epochs would likely lead to overfitting. Using 4 epochs as opposed to 20 led to an improvement in accuracy, as forecasted by the trend of the validation error.
 
 **Antonio**:
 
