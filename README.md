@@ -6,6 +6,8 @@ Originally the Statistical Learning Group (SLG) was created to fill a gap in adv
 ## Spring 2020  
 
 Reading Deep Learning With R by Chollet and Allaire
+- This book utilizes the [Keras](https://keras.rstudio.com/index.html) package
+- Another book you may find useful is [Deep Learning](https://www.deeplearningbook.org/) by Goodfellow, Bengio, and Courville
 
 Meetings roughly every other Thursday 12pm-1 in SAS 1105.  General structure:  
 
