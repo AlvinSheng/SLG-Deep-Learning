@@ -10,7 +10,7 @@ install.packages("keras")
 library(keras)
 install_keras()             #only run this if you haven't before
 ```
-Now that you have all that taken care of we can begin with the our workflow. You'll learn more about what our book calls the "Universal Machine Learning Workflow"[^1] in Chapter 4, but I'll just list the key points here:         
+Now that you have all that taken care of we can begin with the our workflow. You'll learn more about what our book calls the "Universal Machine Learning Workflow" in Chapter 4, but I'll just list the key points here:         
 > 1. Define the problem and assembling a dataset
 > 2. Choosing a measure of success
 > 3. Deciding on an evaluation protocol
@@ -135,4 +135,7 @@ history <- network %>% fit(
 plot(history)
 ```
 
-[^1]: Deep Learning with R, Chollet and Allaire
+Acknowledgements 
+This walkthrough is based largely off *Deep Learning with R, by Chollet and Allaire*
+
+Also thank you to [Alvin Sheng](https://github.com/AlvinSheng) and [Michael Burton](https://michaeleburton.github.io/) for taking the time to piece this and the corresponding Rscript together.

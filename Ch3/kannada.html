@@ -374,7 +374,7 @@ summary {
 <pre class="r"><code>install.packages(&quot;keras&quot;)
 library(keras)
 install_keras()             #only run this if you haven&#39;t before</code></pre>
-<p>Now that you have all that taken care of we can begin with the our workflow. You’ll learn more about what our book calls the “Universal Machine Learning Workflow”<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a> in Chapter 4, but I’ll just list the key points here:<br />
+<p>Now that you have all that taken care of we can begin with the our workflow. You’ll learn more about what our book calls the “Universal Machine Learning Workflow”^1 in Chapter 4, but I’ll just list the key points here:<br />
 &gt; 1. Define the problem and assembling a dataset &gt; 2. Choosing a measure of success &gt; 3. Deciding on an evaluation protocol &gt; 4. Preparing your data &gt; 5. Developing a model that does better than baseline &gt; 6. Scaling Up: Developing a model that overfits &gt; 7. Regularizing your model and tuning your hyperparameters</p>
 </div>
 <div id="lets-begin---preparing-your-data" class="section level3">
@@ -420,15 +420,59 @@ test_images &lt;- test_images / 255</code></pre>
 </div>
 <div id="fit-the-model" class="section level4">
 <h4>Fit the model</h4>
-<pre class="r"><code>network %&gt;% fit(train_images, train_labels, epochs = 5, batch_size = 128)</code></pre>
+<pre class="r"><code>history &lt;- network %&gt;% fit(
+  train_images, train_labels, 
+  epochs = 5, batch_size = 128,
+  validation_split = 0.2)
+
+plot(history)</code></pre>
+<p>This is the end of starter code walkthrough for a simple neural network applied to the Kannada-MNIST dataset. Experiment and try to improve upon these results throughout the semester as we dive further into the world of deep learning. To see how your model does on the testing data you can enter the kaggle competition!</p>
+<p>*<em>Note:</em> This is a <a href="https://www.kaggle.com/c/Kannada-MNIST/overview/kernels-requirements">kernels only</a> competition.</p>
+<p>If you would like to copy all the code at once I have included it here.</p>
+<pre class="r"><code>## Read in data
+setwd(&quot;~/Directory/With/Datasets&quot;)
+train &lt;- read_csv(&quot;train.csv&quot;)
+test &lt;- read_csv(&quot;test.csv&quot;)
+
+# Training Images
+train_images &lt;- train[,-1]
+train_labels &lt;- train[,1]
+
+# Testing Images
+test_images &lt;- test[,-1]
+
+train_images &lt;- as.matrix(train_images)
+train_labels &lt;- as.matrix(train_labels)
+train_labels &lt;- to_categorical(train_labels)
+
+test_images &lt;- as.matrix(test_images)
+
+train_images &lt;- train_images / 255
+
+test_images &lt;- test_images / 255
+
+## Define Network Architecture
+network &lt;- keras_model_sequential() %&gt;%
+  layer_dense(units = 512, activation = &#39;relu&#39;, input_shape = c(28 * 28)) %&gt;%
+  layer_dense(units = 10, activation = &#39;softmax&#39;)
+## Compile the model
+network %&gt;% compile(
+  optimizer = &#39;rmsprop&#39;,
+  loss = &#39;categorical_crossentropy&#39;,
+  metrics = c(&#39;accuracy&#39;)
+)
+
+
+# Fit the model to the training data
+history &lt;- network %&gt;% fit(
+  train_images, train_labels, 
+  epochs = 5, batch_size = 128,
+  validation_split = 0.2)
+
+plot(history)</code></pre>
+<p>1: Deep Learning with R, Chollet and Allaire</p>
 </div>
 </div>
-</div>
-<div class="footnotes">
-<hr />
-<ol>
-<li id="fn1"><p>Deep Learning with R, Chollet and Allaire<a href="#fnref1" class="footnote-back">↩</a></p></li>
-</ol>
 </div>
 
 
