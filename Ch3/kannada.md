@@ -135,7 +135,7 @@ history <- network %>% fit(
 plot(history)
 ```
 
-Acknowledgements 
+Acknowledgements    
 This walkthrough is based largely off *Deep Learning with R, by Chollet and Allaire*
 
 Also thank you to [Alvin Sheng](https://github.com/AlvinSheng) and [Michael Burton](https://michaeleburton.github.io/) for taking the time to piece this and the corresponding Rscript together.
