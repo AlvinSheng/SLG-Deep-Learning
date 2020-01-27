@@ -370,24 +370,65 @@ summary {
 <p>This file contains what you need to get started with the <a href="https://www.kaggle.com/c/Kannada-MNIST">Kannada-MNIST kaggle competition</a>. The competition is a variant of the traditional MNIST dataset, where instead of trying to recognize Arabic numerals we focus on Kannada digits.</p>
 <div id="first-things-first" class="section level3">
 <h3>First things first</h3>
-<p>First we need to make sure that we have the proper data for this task so click on the link above to download the datasets, and place them in a directory of your choosing. After you have done this we need to set our working directory to tell R where to look for our files. Next we need to make sure Keras and Tensorflow installed; you can do so by running the code below.</p>
+<p>First we need to make sure that we have the proper data for this task so click on the link above to download the datasets, and place them in a directory of your choosing. After you have done this we need to set our working directory to tell R where to look for our files. Next we need to make sure <a href="https://keras.rstudio.com/index.html">Keras</a> and <a href="https://www.tensorflow.org/">Tensorflow</a> installed; you can do so by running the code below.</p>
 <pre class="r"><code>install.packages(&quot;keras&quot;)
 library(keras)
 install_keras()             #only run this if you haven&#39;t before</code></pre>
-<p>Now that you have all that taken care of we can begin with the our workflow. You’ll learn more about what our book calls the “Universa Machine Learning Workflow” in Chapter 4, but I’ll just list the key points here:<br />
+<p>Now that you have all that taken care of we can begin with the our workflow. You’ll learn more about what our book calls the “Universal Machine Learning Workflow”<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a> in Chapter 4, but I’ll just list the key points here:<br />
 &gt; 1. Define the problem and assembling a dataset &gt; 2. Choosing a measure of success &gt; 3. Deciding on an evaluation protocol &gt; 4. Preparing your data &gt; 5. Developing a model that does better than baseline &gt; 6. Scaling Up: Developing a model that overfits &gt; 7. Regularizing your model and tuning your hyperparameters</p>
+</div>
+<div id="lets-begin---preparing-your-data" class="section level3">
+<h3>Let’s Begin! - Preparing your data</h3>
+<p>We will begin by reading our data into R, and mutating it into the proper format for keras.</p>
 <pre class="r"><code>setwd(&quot;~/Directory/With/Datasets&quot;)
 train &lt;- read_csv(&quot;train.csv&quot;)
+test &lt;- read_csv(&quot;test.csv&quot;)</code></pre>
+<p>Through kaggle we were given both a training dataset &amp; a testing dataset. First we need to separate the training dataset into images and their corresponding labels.</p>
+<p>Note that we don’t have the labels for the test images, but we do need to remove the rowid column.</p>
+<pre class="r"><code># Training Images
 train_images &lt;- train[,-1]
 train_labels &lt;- train[,1]
-train_images &lt;- as.matrix(train_images)
-train_labels &lt;- as.matrix(train_labels)
 
-test &lt;- read_csv(&quot;test.csv&quot;)
+# Testing Images
 test_images &lt;- test[,-1]
-test_images &lt;- as.matrix(test_images)
 </code></pre>
+<p>I’ve noticed that keras does not like it when our input is stored in a dataframe object, so we will convert these into a matrix objects. We also will need to <a href="https://en.wikipedia.org/wiki/One-hot">one-hot</a> encode our labels; this can be done with the to_categorical() keras function.</p>
+<pre class="r"><code>train_images &lt;- as.matrix(train_images)
+train_labels &lt;- as.matrix(train_labels)
+train_labels &lt;- to_categorical(train_labels)
+
+test_images &lt;- as.matrix(test_images)</code></pre>
+<p>In order to protect our model from convergence issues we are going to normalize them to have values in the range 0-1 rather than 0-255.</p>
+<pre class="r"><code>train_images &lt;- train_images / 255
+
+test_images &lt;- test_images / 255</code></pre>
 </div>
+<div id="defining-your-networks-architecture" class="section level3">
+<h3>Defining your Network’s Architecture</h3>
+<p>From what we’ve seen so far we saw that a network consisting of a single dense layer, and a softmax output layer performed decently well on the MNIST dataset. We will try this same approach here.</p>
+<pre class="r"><code>network &lt;- keras_model_sequential() %&gt;%
+  layer_dense(units = 512, activation = &#39;relu&#39;, input_shape = c(28 * 28)) %&gt;%
+  layer_dense(units = 10, activation = &#39;softmax&#39;)
+</code></pre>
+<div id="compilation-step" class="section level4">
+<h4>Compilation Step</h4>
+<pre class="r"><code>network %&gt;% compile(
+  optimizer = &#39;rmsprop&#39;,
+  loss = &#39;categorical_crossentropy&#39;,
+  metrics = c(&#39;accuracy&#39;)
+)</code></pre>
+</div>
+<div id="fit-the-model" class="section level4">
+<h4>Fit the model</h4>
+<pre class="r"><code>network %&gt;% fit(train_images, train_labels, epochs = 5, batch_size = 128)</code></pre>
+</div>
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>Deep Learning with R, Chollet and Allaire<a href="#fnref1" class="footnote-back">↩</a></p></li>
+</ol>
 </div>
 
 

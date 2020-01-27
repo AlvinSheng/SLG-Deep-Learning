@@ -54,6 +54,9 @@ train_labels <- to_categorical(train_labels)
 
 # Fit the model to the training data
 
-network %>% fit(train_images, train_labels, epochs = 5, batch_size = 128)
+history <- network %>% fit(
+  train_images, train_labels, 
+  epochs = 5, batch_size = 128,
+  validation_split = 0.2)
 
-
+plot(history)
