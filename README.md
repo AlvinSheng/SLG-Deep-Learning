@@ -1,5 +1,5 @@
 # SLG-Deep-Learning
-```python
+```R
 s = "Python syntax highlighting"
 print s
 ```
