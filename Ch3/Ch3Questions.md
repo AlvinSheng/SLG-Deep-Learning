@@ -21,7 +21,7 @@ Which method do you think makes more sense intuitively?  Do you see any possible
 
 **Megan**:
 
-**Michael**:
+**Michael**: One-hot encoding seems more inuitive to me since you would be storing the data in columns that are the same from observation to observation. The other method makes it possible to have columns contain different words.   
 
 **Peter**:
 
@@ -54,7 +54,7 @@ Same with the classifying newswires example. However, reducing the number of epo
 
 **Megan**:
 
-**Michael**:
+**Michael**: The test error seems to follow the same trend as the validation error. As the number of epochs used to fit the data increases the testing error starts to decrease, which is an indication that we have overfit our data.
 
 **Peter**:
 
@@ -86,7 +86,7 @@ Can you think of any consequences or examples of side effects of choosing a sub-
 
 **Megan**:
 
-**Michael**:
+**Michael**: A loss function tells your model how closely it fits your data. Imagine you're in the woods and you are lost, but you have a special gps that must be tuned to give accurate results. If we don't tune this gps properly then we end up going the wrong way and end up farther from our desired destination. So, imagine that tuning the gps is like selecting the right loss function; if we choose the wrong one we may end up with less than optimal results.
 
 **Peter**:
 
@@ -119,7 +119,7 @@ training statistics and test with test statistics)?**
 
 **Megan**:
 
-**Michael**:
+**Michael**: Scaling is important because it allows all variables to be on the same scale, otherwise if you try to update your gradient with variables on vastly different scales this could slow down the fitting of your model. It's important to use the training mean and standard deviation on your test set because the model was trained on data that relied on these values. I think that you wouldn't want to scale the testing and traing sets together because this could lead to some information leak, which can invalidate your testing error estimate.
 
 **Peter**:
 
