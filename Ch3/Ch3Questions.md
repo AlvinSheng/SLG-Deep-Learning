@@ -11,7 +11,7 @@ Which method do you think makes more sense intuitively?  Do you see any possible
 
 **Dale**:
 
-**David**:
+**David**: Intuitively speaking, padding makes more sense to me. However, this still has to be passed through an embedding layer. I also think that if dealing with large data, one-hot encoding will lead to very sparse data and potential computational inefficiencies could arise.
 
 **Deepak**:
 
@@ -46,6 +46,8 @@ Same with the classifying newswires example. However, reducing the number of epo
 
 **David**:
 
+
+
 **Deepak**:
 
 **Jimmy**: I tried only varying the epoch while using the same network architecture that was provided in the book. Epochs: test set accuracy; 4: 0.84092, 20: 0.8424, 50: 0.84356.
@@ -76,7 +78,7 @@ Can you think of any consequences or examples of side effects of choosing a sub-
 
 **Dale**:
 
-**David**:
+**David**: Choosing the loss function properly is key. Choosing a loss function which isn't proper for the data can result in models that aren't useful. Failing to ensure that a good loss function is chosen will result in wasted time for results that are likely useless to the analysis we are hoping to conduct.
 
 **Deepak**:
 
@@ -110,6 +112,8 @@ training statistics and test with test statistics)?**
 **Dale**:
 
 **David**:
+
+Scaling the data using training set statistics is useful because it allows everything to be on the same scale. This will be helpful for ensuring the efficiency of the gradient descent algorithm. If we fail to scale properly we run the risk of making our gradient descent algorithm have to update many variables that are not on the same scale, which slows down the model fitting process. Since the model we will be fitting the test data on is trained  on the training data, it is important that everything has the same scale.
 
 **Deepak**:
 
