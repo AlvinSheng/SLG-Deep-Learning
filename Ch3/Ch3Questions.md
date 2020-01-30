@@ -5,7 +5,7 @@ Which method do you think makes more sense intuitively?  Do you see any possible
 
 **Alvin**: Padding seems more intuitive to me. One-hot encoding seems like it would lead to humongous sparse tensors. Even then, there may be some missing categories, especially with new data.
 
-**Antonio**: Padding.
+**Antonio**: Padding seems like the more flexible approach, in the event the hypothesis space needs to change.
 
 **Cameron**:
 
@@ -41,7 +41,7 @@ fit with more epochs for the binary classification? Does it follow the trend of 
 **Alvin**: For the IMDB binary classification, using more than 4 epochs would likely lead to overfitting. Using 4 epochs as opposed to 20 led to an improvement in accuracy of ~2%, as forecasted by the trend of the validation error. 
 Same with the classifying newswires example. However, reducing the number of epochs from 20 to 9 only led to an ~.5 % increase in accuracy.
 
-**Antonio**:
+**Antonio**: Still need to setup a workstation (download Unix & install packages..possibly add a GPU)
 
 **Cameron**:
 
@@ -78,7 +78,7 @@ Can you think of any consequences or examples of side effects of choosing a sub-
 
 **Alvin**: Choosing the right loss function is important, as it defines the purpose of the model. Choosing the wrong one would make the model work really hard on figuring out the wrong things. One area in which choosing a loss function is important is unbalanced data sets, where one label dominates the others. Using the typical 0-1 loss would likely make the model choose that dominant label most of the time. To make the model able to predict the other labels, you may need to do things like weight balancing to prioritize the minority labels. 
 
-**Antonio**:
+**Antonio**: The loss function is the means for measuring the effectiveness of the parameters within the layers of our network. The better the measure, the more effective other features such as the optimizer will be.
 
 **Cameron**:
 
@@ -114,7 +114,7 @@ training statistics and test with test statistics)?**
 
 **Alvin**: Ensuring that all the features are on the same scale would help a lot with gradient descent algorithms. Standardizing ensures that no variable will be overlooked when trying to minimize the gradient. Also, it helps with algorithms that rely on norms, like lasso/ridge which use the l1/l2 norm, which are affected by the scales of the features. One should never use the test set for anything other than determining final accuracy. Using the test set more than once would give the model an unintentional advantage, skewing the estimate of the true accuracy.
 
-**Antonio**:
+**Antonio**: 
 
 **Cameron**:
 
