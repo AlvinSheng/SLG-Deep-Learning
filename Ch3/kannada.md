@@ -134,6 +134,18 @@ history <- network %>% fit(
 
 plot(history)
 ```
+### Predictions
+```r
+# Predict
+predictions <- network %>% predict(test_images)
+class_pred <- network %>% predict_classes(test_images)
+
+# Format for submission
+
+sub <- cbind(test[,1], class_pred)
+colnames(sub) <- c('id', 'labels')
+write.csv(sub, file = 'submission.csv')
+```
 
 Acknowledgements    
 This walkthrough is based largely off *Deep Learning with R, by Chollet and Allaire*
