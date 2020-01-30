@@ -5,7 +5,7 @@ Which method do you think makes more sense intuitively?  Do you see any possible
 
 **Alvin**: Padding seems more intuitive to me. One-hot encoding seems like it would lead to humongous sparse tensors. Even then, there may be some missing categories, especially with new data.
 
-**Antonio**:
+**Antonio**: Padding.
 
 **Cameron**:
 
