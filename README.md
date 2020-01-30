@@ -25,7 +25,7 @@ Rough schedule:
 | Feb 13th  | Chapter 4 & Readings from other texts | Matthew G. & Antonio J.      |
 | Feb 27th  | Chapter 5                             | Deepak K.                    |
 | Mar 19th  | Computer Vision Project               | 
-| Apr 2nd   | Chapter 6                             | Rebekah C. & Megan T.        |
+| Apr 2nd   | Chapter 6                             |        |
 | Apr 16th  | Natural Language Processing Project   |                  
 
 ## Instructions for Updating Question Files
