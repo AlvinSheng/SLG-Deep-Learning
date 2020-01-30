@@ -5,7 +5,7 @@ Which method do you think makes more sense intuitively?  Do you see any possible
 
 **Alvin**: Padding seems more intuitive to me. One-hot encoding seems like it would lead to humongous sparse tensors. Even then, there may be some missing categories, especially with new data.
 
-**Antonio**:
+**Antonio**: Padding seems like the more flexible approach, in the event the hypothesis space needs to change.
 
 **Cameron**:
 
@@ -26,7 +26,7 @@ Padding make more sense intuitively.  With One-hot encoding, frequency of occurr
 
 **Michael**: One-hot encoding seems more inuitive to me since you would be storing the data in columns that are the same from observation to observation. The other method makes it possible to have columns contain different words.   
 
-**Peter**:
+**Peter**: One-hot encoding is what I first makes sense to me, since it is basically what we do in the design matrix of a linear model with categorical features.  Jimmy makes a good point, however, about how we could look information.  Of course, this would rely on knowing the model is going to leverage the ordered information.
 
 **Rebekah**:
 
@@ -41,7 +41,7 @@ fit with more epochs for the binary classification? Does it follow the trend of 
 **Alvin**: For the IMDB binary classification, using more than 4 epochs would likely lead to overfitting. Using 4 epochs as opposed to 20 led to an improvement in accuracy of ~2%, as forecasted by the trend of the validation error. 
 Same with the classifying newswires example. However, reducing the number of epochs from 20 to 9 only led to an ~.5 % increase in accuracy.
 
-**Antonio**:
+**Antonio**: Still need to setup a workstation (download Unix & install packages..possibly add a GPU)
 
 **Cameron**:
 
@@ -78,7 +78,7 @@ Can you think of any consequences or examples of side effects of choosing a sub-
 
 **Alvin**: Choosing the right loss function is important, as it defines the purpose of the model. Choosing the wrong one would make the model work really hard on figuring out the wrong things. One area in which choosing a loss function is important is unbalanced data sets, where one label dominates the others. Using the typical 0-1 loss would likely make the model choose that dominant label most of the time. To make the model able to predict the other labels, you may need to do things like weight balancing to prioritize the minority labels. 
 
-**Antonio**:
+**Antonio**: The loss function is the means for measuring the effectiveness of the parameters within the layers of our network. The better the measure, the more effective other features such as the optimizer will be.
 
 **Cameron**:
 
@@ -99,7 +99,7 @@ It’s important that loss function you chose is aligned with the success of tas
 
 **Michael**: A loss function tells your model how closely it fits your data. Imagine you're in the woods and you are lost, but you have a special gps that must be tuned to give accurate results. If we don't tune this gps properly then we end up going the wrong way and end up farther from our desired destination. So, imagine that tuning the gps is like selecting the right loss function; if we choose the wrong one we may end up with less than optimal results.
 
-**Peter**:
+**Peter**: In binary classification, there are different ways to evaluate your model.  If you are mostly interested in getting it right when you truly have a 1, then you should focus more on the precision of your model rather than your overall accuracy.  This same idea goes for the loss function, where different loss functions value different things and peanlize different types of errors more heavily.
 
 **Rebekah**:
 
@@ -114,7 +114,7 @@ training statistics and test with test statistics)?**
 
 **Alvin**: Ensuring that all the features are on the same scale would help a lot with gradient descent algorithms. Standardizing ensures that no variable will be overlooked when trying to minimize the gradient. Also, it helps with algorithms that rely on norms, like lasso/ridge which use the l1/l2 norm, which are affected by the scales of the features. One should never use the test set for anything other than determining final accuracy. Using the test set more than once would give the model an unintentional advantage, skewing the estimate of the true accuracy.
 
-**Antonio**:
+**Antonio**: 
 
 **Cameron**:
 
@@ -137,7 +137,7 @@ Sending widely different range of data will increase difficulties for model lear
 
 **Michael**: Scaling is important because it allows all variables to be on the same scale, otherwise if you try to update your gradient with variables on vastly different scales this could slow down the fitting of your model. It's important to use the training mean and standard deviation on your test set because the model was trained on data that relied on these values. I think that you wouldn't want to scale the testing and traing sets together because this could lead to some information leak, which can invalidate your testing error estimate.
 
-**Peter**:
+**Peter**:  Everyone else has basically said what I want to about scaling.  Why should we not scale the test and train information together?  Well, what's the point of the testing set?  The testing set is simulating what you ultimately want out of your model -- new predictors and unknown responses.  When you train your model, you don't have access to those new predictors, so obviously you couldn't scale all of them together.  And hence we see why scaling the test and training features together is bad -- very bad.
 
 **Rebekah**:
 
