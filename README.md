@@ -6,6 +6,8 @@ Originally the Statistical Learning Group (SLG) was created to fill a gap in adv
 ## Spring 2020  
 
 Reading Deep Learning With R by Chollet and Allaire
+- This book utilizes the [Keras](https://keras.rstudio.com/index.html) package
+- Another book you may find useful is [Deep Learning](https://www.deeplearningbook.org/) by Goodfellow, Bengio, and Courville
 
 Meetings roughly every other Thursday 12pm-1 in SAS 1105.  General structure:  
 
@@ -15,10 +17,10 @@ Meetings roughly every other Thursday 12pm-1 in SAS 1105.  General structure:
 
 Rough schedule:  
 
-| Date      | Topic                                 | Lightning-Talk Presenter(s)  |
+| Date      | Topic                                 | Lightning-Talk Presenter(s) & Links |
 | ----------|:-------------------------------------:| ----------------------------:|
 | Jan 9th   | Introduction, Intro to R/GitHub       |                              |
-| Jan 16th  | Chapters 1 & 2                        | David E.   & Peter N.        |
+| Jan 16th  | Chapters 1 & 2                        | [David E.   & Peter N.](https://www.youtube.com/watch?v=VAUMDCbL_9M&feature=share)        |
 | Jan 30th  | Chapter 3 & Applied Project           | Cameron E. & Dale G.         |
 | Feb 13th  | Chapter 4 & Readings from other texts | Matthew G. & Antonio J.      |
 | Feb 27th  | Chapter 5                             | Deepak K.                    |
