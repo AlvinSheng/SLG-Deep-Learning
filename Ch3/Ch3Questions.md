@@ -18,6 +18,8 @@ Padding make more sense intuitively.  With One-hot encoding, frequency of occurr
 
 **Jimmy**: Padding seems more intuitive to me. Unless I am misunderstanding, it seems like one-hot encoding only tracks if a word is used, losing all information about the ordering of the words. The reviews "This movie was funny and not bad." and "This movie was bad and not funny" would have the same representation. Also repeated words are accounted for.
 
+**Justin**:
+
 **Matthew**:
 
 **Megan**:
@@ -54,6 +56,8 @@ With More epochs training accuracy increases / training loss decreases as effect
 
 **Jimmy**: I tried only varying the epoch while using the same network architecture that was provided in the book. Epochs: test set accuracy; 4: 0.84092, 20: 0.8424, 50: 0.84356.
 
+**Justin**:
+
 **Matthew**:
 
 **Megan**:
@@ -86,6 +90,8 @@ Can you think of any consequences or examples of side effects of choosing a sub-
 It’s important that loss function you chose is aligned with the success of task at hand. Choosing sub-optimal one may results undesired outcomes as model will take any shortcut to achieve outcomes at hand. E.g. auto driving car taking decision to kill x number of pedestrians to avoid save driver.
 
 **Jimmy**: Understanding your choice of loss function is critical to the performance of your neural network. It will train itself with the express purpose of optimizing the loss function. If you choose correctly, your network will improve its performance on metrics that you care about. If you choose an inappropriate loss function, the model will still work, but the results will not be helpful in achieving your goal.
+
+**Justin**:
 
 **Matthew**:
 
@@ -122,6 +128,8 @@ Scaling the data using training set statistics is useful because it allows every
 Sending widely different range of data will increase difficulties for model learning. Features wise normalization will help solve this problem, as it will be maintain the relative spread between features values while scaling. It’s important to use training set mean and SD while normalizing Validation data as well, else scaling for same values of a feature may result in different outputs
 
 **Jimmy**: A data set can contain many features measuring completely different covariates of interest. We have to be careful when using this information because each feature comes with its own units and range of likely values. In order to put the covariates on the same level, we need to scale them. Otherwise one variable may dominate the others not because it is more important/useful but because its units were larger. You may only use training data to build your model. We are setting aside the test set as new data to examine performance. We cannot use any of its structure to help predict. 
+
+**Justin**:
 
 **Matthew**:
 
