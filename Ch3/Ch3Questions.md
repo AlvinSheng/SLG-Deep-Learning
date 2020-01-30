@@ -26,7 +26,7 @@ Padding make more sense intuitively.  With One-hot encoding, frequency of occurr
 
 **Michael**: One-hot encoding seems more inuitive to me since you would be storing the data in columns that are the same from observation to observation. The other method makes it possible to have columns contain different words.   
 
-**Peter**:
+**Peter**: One-hot encoding is what I first makes sense to me, since it is basically what we do in the design matrix of a linear model with categorical features.  Jimmy makes a good point, however, about how we could look information.  Of course, this would rely on knowing the model is going to leverage the ordered information.
 
 **Rebekah**:
 
@@ -99,7 +99,7 @@ It’s important that loss function you chose is aligned with the success of tas
 
 **Michael**: A loss function tells your model how closely it fits your data. Imagine you're in the woods and you are lost, but you have a special gps that must be tuned to give accurate results. If we don't tune this gps properly then we end up going the wrong way and end up farther from our desired destination. So, imagine that tuning the gps is like selecting the right loss function; if we choose the wrong one we may end up with less than optimal results.
 
-**Peter**:
+**Peter**: In binary classification, there are different ways to evaluate your model.  If you are mostly interested in getting it right when you truly have a 1, then you should focus more on the precision of your model rather than your overall accuracy.  This same idea goes for the loss function, where different loss functions value different things and peanlize different types of errors more heavily.
 
 **Rebekah**:
 
@@ -137,7 +137,7 @@ Sending widely different range of data will increase difficulties for model lear
 
 **Michael**: Scaling is important because it allows all variables to be on the same scale, otherwise if you try to update your gradient with variables on vastly different scales this could slow down the fitting of your model. It's important to use the training mean and standard deviation on your test set because the model was trained on data that relied on these values. I think that you wouldn't want to scale the testing and traing sets together because this could lead to some information leak, which can invalidate your testing error estimate.
 
-**Peter**:
+**Peter**:  Everyone else has basically said what I want to about scaling.  Why should we not scale the test and train information together?  Well, what's the point of the testing set?  The testing set is simulating what you ultimately want out of your model -- new predictors and unknown responses.  When you train your model, you don't have access to those new predictors, so obviously you couldn't scale all of them together.  And hence we see why scaling the test and training features together is bad -- very bad.
 
 **Rebekah**:
 
