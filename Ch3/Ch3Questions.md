@@ -11,11 +11,12 @@ Which method do you think makes more sense intuitively?  Do you see any possible
 
 **Dale**:
 
-**David**:
+**David**: Intuitively speaking, padding makes more sense to me. However, this still has to be passed through an embedding layer. I also think that if dealing with large data, one-hot encoding will lead to very sparse data and potential computational inefficiencies could arise.
 
 **Deepak**:
+Padding make more sense intuitively.  With One-hot encoding, frequency of occurrence a word in a given sentence/sequence is lost, which may be important factor in some usecases. With Padding, longest statement will determine length of the sequence tenser, which could be costly for processing. Padding however will preserve relative relative words placement information for model to use. Also needs to take into consideration on how well Dense and Embedded layer can consume on-hot encoded and padded tensors.
 
-**Jimmy**:
+**Jimmy**: Padding seems more intuitive to me. Unless I am misunderstanding, it seems like one-hot encoding only tracks if a word is used, losing all information about the ordering of the words. The reviews "This movie was funny and not bad." and "This movie was bad and not funny" would have the same representation. Also repeated words are accounted for.
 
 **Matthew**:
 
@@ -46,9 +47,12 @@ Same with the classifying newswires example. However, reducing the number of epo
 
 **David**:
 
-**Deepak**:
 
-**Jimmy**:
+
+**Deepak**:
+With More epochs training accuracy increases / training loss decreases as effect of gradient descent, however this indicates model being tuned for specific training set. With validation set with more epochs after certain point accuracy starts decreasing and loss increases. 
+
+**Jimmy**: I tried only varying the epoch while using the same network architecture that was provided in the book. Epochs: test set accuracy; 4: 0.84092, 20: 0.8424, 50: 0.84356.
 
 **Matthew**:
 
@@ -76,11 +80,12 @@ Can you think of any consequences or examples of side effects of choosing a sub-
 
 **Dale**:
 
-**David**:
+**David**: Choosing the loss function properly is key. Choosing a loss function which isn't proper for the data can result in models that aren't useful. Failing to ensure that a good loss function is chosen will result in wasted time for results that are likely useless to the analysis we are hoping to conduct.
 
 **Deepak**:
+It’s important that loss function you chose is aligned with the success of task at hand. Choosing sub-optimal one may results undesired outcomes as model will take any shortcut to achieve outcomes at hand. E.g. auto driving car taking decision to kill x number of pedestrians to avoid save driver.
 
-**Jimmy**:
+**Jimmy**: Understanding your choice of loss function is critical to the performance of your neural network. It will train itself with the express purpose of optimizing the loss function. If you choose correctly, your network will improve its performance on metrics that you care about. If you choose an inappropriate loss function, the model will still work, but the results will not be helpful in achieving your goal.
 
 **Matthew**:
 
@@ -111,9 +116,12 @@ training statistics and test with test statistics)?**
 
 **David**:
 
-**Deepak**:
+Scaling the data using training set statistics is useful because it allows everything to be on the same scale. This will be helpful for ensuring the efficiency of the gradient descent algorithm. If we fail to scale properly we run the risk of making our gradient descent algorithm have to update many variables that are not on the same scale, which slows down the model fitting process. Since the model we will be fitting the test data on is trained  on the training data, it is important that everything has the same scale.
 
-**Jimmy**:
+**Deepak**:
+Sending widely different range of data will increase difficulties for model learning. Features wise normalization will help solve this problem, as it will be maintain the relative spread between features values while scaling. It’s important to use training set mean and SD while normalizing Validation data as well, else scaling for same values of a feature may result in different outputs
+
+**Jimmy**: A data set can contain many features measuring completely different covariates of interest. We have to be careful when using this information because each feature comes with its own units and range of likely values. In order to put the covariates on the same level, we need to scale them. Otherwise one variable may dominate the others not because it is more important/useful but because its units were larger. You may only use training data to build your model. We are setting aside the test set as new data to examine performance. We cannot use any of its structure to help predict. 
 
 **Matthew**:
 
