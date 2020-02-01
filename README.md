@@ -21,7 +21,7 @@ Rough schedule:
 | ----------|:-------------------------------------:| ----------------------------:|
 | Jan 9th   | Introduction, Intro to R/GitHub       |                              |
 | Jan 16th  | Chapters 1 & 2                        | [David E.   & Peter N.](https://www.youtube.com/watch?v=VAUMDCbL_9M&feature=share)        |
-| Jan 30th  | Chapter 3 & Applied Project           | Cameron E. & Dale G.         |
+| Jan 30th  | Chapter 3 & Applied Project           | [Cameron E. & Dale G.](https://github.com/AlvinSheng/SLG-Deep-Learning/tree/master/Ch3/presentation_material)         |
 | Feb 13th  | Chapter 4 & Readings from other texts | Matthew G. & Antonio J.      |
 | Feb 27th  | Chapter 5                             | Deepak K.                    |
 | Mar 19th  | Computer Vision Project               | 
