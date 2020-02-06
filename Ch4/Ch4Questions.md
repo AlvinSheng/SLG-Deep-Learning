@@ -2,7 +2,7 @@ Please answer questions for Chapter 4 next to your name.
 
 **1. In the discussion of missing values on page 93 the authors say to make sure to code the missing values consistently so that the model learns what to do with them.  Do you think that imputation methods would produce a benefit in the model?  What about multiple imputation?**
 
-**Alvin**: 
+**Alvin**: I think imputation methods may produce a benefit, but not as much as in classical machine learning algorithms. The neural network should automatically incorporate interrelationships between covariates to make new features. This probably would make imputation/multiple imputation, which rely on associations between covariates, redundant. 
 
 **Antonio**:
 
