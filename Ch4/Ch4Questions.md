@@ -18,13 +18,9 @@ Please answer questions for Chapter 4 next to your name.
 
 **Matthew**:
 
-**Megan**:
-
-**Michael**: 
+**Michael**: I think that imputation would be helpful in this case. The book also talks about feature engineering and how even though a neural network will be able to extract appropriate representations this process can be sped up by creating new, more elegant features. This is similar to imputation if we can fill in the missing values then I believe it should benefit the model. I think that [Multiple Imputation](https://stats.idre.ucla.edu/stata/seminars/mi_in_stata_pt1_new/) may be too computationally difficult since you would need to build m models, and combine them; plus how would we use SGD with this?
 
 **Peter**:
-
-**Rebekah**:
 
 **Saran**:
 
@@ -49,13 +45,9 @@ Please answer questions for Chapter 4 next to your name.
 
 **Matthew**:
 
-**Megan**:
-
-**Michael**: 
+**Michael**: We could use a validation set for linear regression. Since they are typically used when we want to draw inference, like in an experiment, we don't necessarily have many data points to separate into training, validation, and testing sets. 
 
 **Peter**:
-
-**Rebekah**:
 
 **Saran**:
 
@@ -79,13 +71,9 @@ Please answer questions for Chapter 4 next to your name.
 
 **Matthew**:
 
-**Megan**:
-
-**Michael**: 
+**Michael**: L1 and L2 regularization makes me think of Lasso and Ridge regression. When we use "weight decay" regularization we need to use cross validation to determine what the optimal hyperparameter is.
 
 **Peter**:
-
-**Rebekah**:
 
 **Saran**:
 
@@ -110,13 +98,9 @@ Please answer questions for Chapter 4 next to your name.
 
 **Matthew**:
 
-**Megan**:
-
-**Michael**: 
+**Michael**: In general I think this is a good strategy for prediction because we are using a validation set to help create a more generalizable model. This is the same as the idea behind decisions trees; build a very deep tree, and then prune it down to the optimum of some criterion. Although this can lead to a more generalizable model this could also be computationally expensive if the model is very complex; one could employ early stopping in this case (Goodfellow Ch. 7).
 
 **Peter**:
-
-**Rebekah**:
 
 **Saran**:
 
@@ -141,13 +125,9 @@ Please answer questions for Chapter 4 next to your name.
 
 **Matthew**:
 
-**Megan**:
-
-**Michael**: 
+**Michael**: I've used cross-validation to select hyperparameters for projects every now and again, but haven't really engineered any features.
 
 **Peter**:
-
-**Rebekah**:
 
 **Saran**:
 
