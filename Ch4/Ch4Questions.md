@@ -33,7 +33,7 @@ Please answer questions for Chapter 4 next to your name.
 
 **2. Why isn’t a validation set needed with a linear regression model?  Which algorithms that you’ve used require a validation set or something like cross-validation?**
 
-**Alvin**: 
+**Alvin**: A linear regression model has parameters that can be optimized analytically. All other ML methods I've used, e.g. SVM, KNN, tree-based methods, etc. rely on validation sets or cross-validation. A good example is regularized generalized linear models as implemented in glmnet. 
 
 **Antonio**:
 
@@ -63,7 +63,7 @@ Please answer questions for Chapter 4 next to your name.
 
 **3. To “regularize” the model you can add weight penalties such as L1 norm, L2 norm, and a combination of the two.  What statistical methods do these remind you of? What additional considerations should we keep in mind when adding in these weight terms?**
 
-**Alvin**: 
+**Alvin**: LASSO, Ridge, SCAD, etc. If these penalties are used, it's especially important to scale the variables, lest one variable dominate the others and use up the "budget" from the penalty by itself.
 
 **Antonio**:
 
@@ -94,7 +94,9 @@ Please answer questions for Chapter 4 next to your name.
 
 **4. What do you think of the idea of training a very big model and then using the data to make it smaller?  Have you seen this strategy used anywhere else?  What might be the pros and cons?**
 
-**Alvin**: 
+**Alvin**: It sounds very engineering-oriented. If the main goal is prediction, it sounds like the way to go. However, interpretability and its potential to be used for inference may suffer.
+
+It's how decision tree algorithms work-- you overgrow the tree, and then prune the leaves with the highest impurity. 
 
 **Antonio**:
 
@@ -125,7 +127,7 @@ Please answer questions for Chapter 4 next to your name.
 
 **5. When have you encountered/used hyperparameters or feature engineering?**
 
-**Alvin**: 
+**Alvin**: I have used hyperparameters for ML algorithms other than classical linear regression. I've done feature engineering for almost every data science project with ML involved. However, when I did a Kaggle ML competition using convolutional neural nets to diagnose eyes for diabetic retinopathy, I didn't do any feature engineering. In hindsight, maybe I could write a program to detect different kinds of lesions in the eye pictures. That would be quite difficult, however--neural nets may figure it out better on their own. 
 
 **Antonio**:
 
