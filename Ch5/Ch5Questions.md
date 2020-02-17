@@ -27,7 +27,7 @@ Please answer questions for Chapter 5 next to your name.
 **Yan**:
   
   
-  **2. In chapter 7 of Deep Learning by Goodfellow data augmentation is listed as a regularization technique. Do you agree with this, why?**
+**2. In chapter 7 of Deep Learning by Goodfellow data augmentation is listed as a regularization technique. Do you agree with this, why?**
   
 **Alvin**: 
 
@@ -80,34 +80,7 @@ Please answer questions for Chapter 5 next to your name.
 **Yan**:
 
 
-**4. The model created in the first half of the chapter had a pooling step after every convolutional layer whereas the pretrained model has a pooling step after every two                   convolutional layers. What may be the pros and cons of having more convolutional steps before pooling?**
-
-**Alvin**: 
-
-**Antonio**:
-
-**Cameron**:
-
-**Dale**:
-
-**David**:
-
-**Deepak**:
-
-**Jimmy**: 
-
-**Matthew**:
-
-**Michael**: 
-
-**Peter**:
-
-**Saran**:
-
-**Yan**:
-
-
-**5. When have you encountered/used hyperparameters or feature engineering?**
+**4. The model created in the first half of the chapter had a pooling step after every convolutional layer whereas the pretrained model has a pooling step after every two convolutional layers. What may be the pros and cons of having more convolutional steps before pooling?**
 
 **Alvin**: 
 
