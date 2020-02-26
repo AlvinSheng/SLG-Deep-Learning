@@ -22,7 +22,7 @@ This is not possible with Densely connected networks as locality is hard to lear
 
 **Matthew**:
 
-**Michael**: 
+**Michael**: It's possible, since the convolution operation allows the network to learn local features that can be recognized globally because of convolutions equivariance property. CNN's use parameter sharing so for every location we only have one set of parameters to use. In a densely connected network I don't believe you'd be able to use a smal dataset since you will need to estimate a parameter for each location in the image.
 
 **Peter**:
 
@@ -51,7 +51,7 @@ The purpose of other regularization techniques such as LASSO and ridge, a penalt
 
 **Matthew**:
 
-**Michael**: 
+**Michael**: They define regularization as made to a learning algorithm that is intended to reduce its testing (generalization) error, but not its training error. From this definition I would agree that dataset augmentation is listed as a regularization technique; since you are translating, rotating, stretching, and shrinking images your network will deal perturbations like these when working with test data.
 
 **Peter**:
 
@@ -92,7 +92,7 @@ Lose control over your full model/ all hyperparameters.
 
 **Matthew**:
 
-**Michael**: 
+**Michael**: The advantage of using a pretrained network is that you don't have to use as much computational power to complete your task. This assumes the network that your pretrained network is similar to what you are working on. In the book they used a pretrained network from ImageNet to be used for binary classification of cats and dogs. They were able to use this network since ImageNet had many cat and dog classes. One disadvantage is you may not fully understand why the original creator made some model selection choices.
 
 **Peter**:
 
@@ -130,7 +130,7 @@ Pooling shrinks the amount of nodes in a layer. So the less pooling you do, the 
 
 **Matthew**:
 
-**Michael**: 
+**Michael**: I think by using more convolutional layers the network will be able to better extract different layers of representations. By having pooling layers between every two convolutional layers the number of total parameters in the network will be larger; this is more computationally expensive.
 
 **Peter**:
 
