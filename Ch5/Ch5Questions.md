@@ -2,7 +2,7 @@ Please answer questions for Chapter 5 next to your name.
 
 **1. The book says it may be possible to use a convolutional neural network on a “small” dataset provided the problem is simple enough. Why is this, could we build a densely connected network too?**
   
-**Alvin**: 
+**Alvin**: If the dataset is simple enough, the neural network will not need to learn as many features. However, CNNs will probably still outperform densely connected networks, as it can incorporate spatial relationships among pixels.
 
 **Antonio**:
 
@@ -24,16 +24,15 @@ This is not possible with Densely connected networks as locality is hard to lear
 
 **Michael**: It's possible, since the convolution operation allows the network to learn local features that can be recognized globally because of convolutions equivariance property. CNN's use parameter sharing so for every location we only have one set of parameters to use. In a densely connected network I don't believe you'd be able to use a smal dataset since you will need to estimate a parameter for each location in the image.
 
-**Peter**:
+**Peter**: The translation invariant property surely helps here.  In any dataset, variation in the location of the signals exists.  For larger datasets, the greater signal might power through, but maybe not with smaller.  Tranlational invariance helps make the model robust to this variance which is obviously appealing with smaller datasets -- and larger as well. 
 
 **Saran**:
 
 **Yan**:
   
-  
 **2. In chapter 7 of Deep Learning by Goodfellow data augmentation is listed as a regularization technique. Do you agree with this, why?**
   
-**Alvin**: 
+**Alvin**: Yes, because it combats overfitting. Data augmentation seems akin to bagging, or bootstrap aggregation: both methods make new data sets from the original one, fit the model on all of them, and aggregate results to decrease variance.
 
 **Antonio**:
 
@@ -61,7 +60,7 @@ The purpose of other regularization techniques such as LASSO and ridge, a penalt
 
 **3. What are some advantages of using a pretrained network? Do you see any disadvantages?**
 
-**Alvin**: 
+**Alvin**: Using a pretrained network would allow you to use features learned on much larger data sets, like ImageNet, for a smaller dataset. However, if the pretrained network was trained on a vastly different task, then the features learned on that task may be useless or even detrimental for the current task. 
 
 **Antonio**:
 
@@ -103,7 +102,7 @@ Lose control over your full model/ all hyperparameters.
 
 **4. The model created in the first half of the chapter had a pooling step after every convolutional layer whereas the pretrained model has a pooling step after every two convolutional layers. What may be the pros and cons of having more convolutional steps before pooling?**
 
-**Alvin**: 
+**Alvin**: More convolutional steps before pooling would require more parameters to be trained. Pooling more frequently would cut down the number of parameters that have to be trained. However, if the images are more complex, perhaps more convolutional layers would be needed to filter the important details at every step. 
 
 **Antonio**:
 
