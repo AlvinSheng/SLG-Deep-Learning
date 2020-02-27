@@ -24,12 +24,11 @@ This is not possible with Densely connected networks as locality is hard to lear
 
 **Michael**: It's possible, since the convolution operation allows the network to learn local features that can be recognized globally because of convolutions equivariance property. CNN's use parameter sharing so for every location we only have one set of parameters to use. In a densely connected network I don't believe you'd be able to use a smal dataset since you will need to estimate a parameter for each location in the image.
 
-**Peter**:
+**Peter**: The translation invariant property surely helps here.  In any dataset, variation in the location of the signals exists.  For larger datasets, the greater signal might power through, but maybe not with smaller.  Tranlational invariance helps make the model robust to this variance which is obviously appealing with smaller datasets -- and larger as well. 
 
 **Saran**:
 
 **Yan**:
-  
   
 **2. In chapter 7 of Deep Learning by Goodfellow data augmentation is listed as a regularization technique. Do you agree with this, why?**
   
