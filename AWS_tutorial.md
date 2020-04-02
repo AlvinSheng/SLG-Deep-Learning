@@ -46,7 +46,7 @@ GOODSIG _gpgbuilder FE8564CFF1AB93F1728645193F32EE77E331692F 1575443526
 
 sudo gdebi rstudio-server-1.2.5033-amd64.deb
 
-*The below command didn't work for me. I just ignored it*
+*The below command didn't work for me. Trying to troubleshoot rn*
 
 sudo /bin/bash -c "echo 'session-timeout-minutes=0' >> \ /etc/rstudio/rsession.conf" 
 
