@@ -46,7 +46,8 @@ GOODSIG _gpgbuilder FE8564CFF1AB93F1728645193F32EE77E331692F 1575443526
 
 sudo gdebi rstudio-server-1.2.5033-amd64.deb
 
-*The below command didn't work for me. Trying to troubleshoot rn*
+*The below command didn't work for me. Trying to troubleshoot right now*
+*My possible solution to this is to do this command (sudo -e /etc/rstudio/rserver.conf) and edit the file directly, e.g. type session-timeout-minutes=0 into the file. Do the same with the other "echo '...' >> \ /etc/rstudio/rsession or rserver.conf*
 
 sudo /bin/bash -c "echo 'session-timeout-minutes=0' >> \ /etc/rstudio/rsession.conf" 
 
