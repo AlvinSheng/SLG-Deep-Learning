@@ -16,7 +16,7 @@
 
 **Matthew**:
   
-**Michael**: 
+**Michael**: Bidirectional recurrent neural networks are useful when we have data in which the order is meaningful. For example, we may be looking at text data and want to predict the next word in a sequence. We know that the meaning of a word relies on the word directly before or after it, so it would make sense to use these when predicting a word at a given point. Bidirectional RNN's allow us to incorporate this logic by fitting a forward and a backwards recurrent neural network.
   
 **Peter**:
   
@@ -38,7 +38,7 @@
 
 **Matthew**:
   
-**Michael**: 
+**Michael**: In addition to text data, I imagine you could use a recurrent neural network to predict the next frame in a film. The book also mentions they can be used for forecasting.
   
 **Peter**:
 
@@ -60,7 +60,7 @@
 
 **Matthew**:
   
-**Michael**: 
+**Michael**: Long-term time dependencies are often hard to learn, and the regular RNN layer is subject to the vanishing gradient problem. 
   
 **Peter**:
 
@@ -82,6 +82,6 @@
 
 **Matthew**:
   
-**Michael**: 
+**Michael**: I think it's hard to dial down similarities that aren't things like "they use gradient descent," but i think one of the differences is they have their own strengths. CNNs perform well on text data while RNNs are great for sequential data.
   
 **Peter**:
