@@ -1,6 +1,6 @@
 **1. Why might bidirectional RNNs be useful?**
   
-**Alvin**: 
+**Alvin**: It offers an alternative way of analyzing the data. If there's enough data to prevent overfitting, ensembiling anti-chronological RNNs with a chronological one could improve performance.
 
 **Antonio**:
 
@@ -22,7 +22,7 @@
   
 **2. Can you think of other types of data that RNNs would be useful for?**
   
-**Alvin**: 
+**Alvin**: In addition to text data, it can analyze other kinds of sequence data, like timeseries data or videos. 
 
 **Antonio**:
 
@@ -44,7 +44,7 @@
 
 **3. What are some pitfalls of regular RNN layers? **
 
-**Alvin**: 
+**Alvin**: It cannot retain information from many timesteps before effectively, like LSTM layers can. 
 
 **Antonio**:
 
@@ -66,7 +66,7 @@
 
 **4. What are the similarities and differences between the CNNs in this chapter and those in chapter 5?**
 
-**Alvin**: 
+**Alvin**: The CNNs in this chapter are just for one-dimensional sequences. Otherwise, they are the same as those in Chapter 5. 
 
 **Antonio**:
 
