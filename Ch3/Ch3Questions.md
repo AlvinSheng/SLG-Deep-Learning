@@ -1,5 +1,7 @@
 Please answer questions for Chapter 3 next to your name.
 
+![e^{i \pi} = -1](https://render.githubusercontent.com/render/math?math=e%5E%7Bi%20%5Cpi%7D%20%3D%20-1)
+
 **1. On page 61 the authors discuss two options for preparing the data for use.  
 Which method do you think makes more sense intuitively?  Do you see any possible pros or cons to one choice or the other?**
 
