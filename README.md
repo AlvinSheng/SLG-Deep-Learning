@@ -38,3 +38,7 @@ Rough schedule:
     2. git commit --m "Your message here"
     3. git push
 4. Submit a pull request
+
+
+
+Below we will discuss the Bayesian version of Deep learning.
